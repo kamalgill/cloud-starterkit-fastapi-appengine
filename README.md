@@ -117,12 +117,13 @@ pytest tests/test_api.py::test_hello
 
 1. Create an App Engine Project at https://console.cloud.google.com/appengine
 2. Download and install the [Google Cloud SDK](https://cloud.google.com/sdk/docs/)
-3. If on Windows, run the "Google Cloud SDK Shell" application
-4. Type `gcloud init` in a terminal or in the Cloud SDK Shell
+3. If on Windows, run the "Google Cloud SDK Shell" application (keep option selected during SDK install)
+4. Type `gcloud init` in a terminal or in the Cloud SDK Shell (or keep option selected during install)
 5. Log in via `gcloud auth login` in the Cloud SDK Shell if necessary
 6. Set the active project (created in step 1) via `gcloud config set project PROJECT_ID`
 7. If on Windows, install the App Engine components via `gcloud components install app-engine-python`
 
+See the platform-specific Quickstart guides at https://cloud.google.com/sdk/docs/quickstarts
 
 ## Deploying to Google App Engine
 
