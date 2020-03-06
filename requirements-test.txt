@@ -1,0 +1,5 @@
+# Requirements for tests via CI workflow
+-r requirements-common.txt
+pytest
+# The 'requests' package is required by starlette.testclient.TestClient and pytest
+requests==2.23.0

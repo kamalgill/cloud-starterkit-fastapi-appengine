@@ -1,0 +1,27 @@
+{
+  "name": "cloud-starterkit-fastapi-appengine",
+  "version": "1.0.0",
+  "description": "Starter Kit for FastAPI on Google App Engine",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "uvicorn app.application:app --reload",
+    "start:prod": "gunicorn --workers 1 --worker-class uvicorn.workers.UvicornWorker --bind :9000 app.application:app",
+    "test": "pytest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamalgill/cloud-starterkit-fastapi-appengine.git"
+  },
+  "keywords": [
+    "FastAPI",
+    "Python"
+  ],
+  "author": "Kamal Gill",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/kamalgill/cloud-starterkit-fastapi-appengine/issues"
+  },
+  "homepage": "https://github.com/kamalgill/cloud-starterkit-fastapi-appengine#readme"
+}

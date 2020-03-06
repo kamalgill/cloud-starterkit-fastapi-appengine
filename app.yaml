@@ -1,0 +1,16 @@
+# Google App Engine config file
+# -----------------------------
+# See https://cloud.google.com/appengine/docs/standard/python3/config/appref
+
+# Recommended to set to Python 3.7 runtime or later
+runtime: python37
+
+# Set App Engine instance class (defaults to F1)
+# See https://cloud.google.com/appengine/docs/standard/#instance_classes
+instance_class: F1
+
+# Set entrypoint to locate FastAPI app, which is 'app' in module app/application.py
+# Configure gunicorn worker count via --workers arg based on the App Engine instance class
+#   e.g. Set workers = 1 for F1 instance class, workers = 2 for F2, and workers = 4 for F4
+# See https://cloud.google.com/appengine/docs/standard/python3/runtime#application_startup
+entrypoint: gunicorn --workers 1 --worker-class uvicorn.workers.UvicornWorker --bind :$PORT app.application:app
