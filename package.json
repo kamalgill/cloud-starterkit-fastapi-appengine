@@ -6,8 +6,8 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "uvicorn app.application:app --reload",
-    "start:prod": "gunicorn --workers 1 --worker-class uvicorn.workers.UvicornWorker --bind :9000 app.application:app",
+    "start": "uvicorn app.main:application --reload",
+    "start:prod": "gunicorn --workers 1 --worker-class uvicorn.workers.UvicornWorker --bind :9000 app.main:application",
     "test": "pytest"
   },
   "repository": {

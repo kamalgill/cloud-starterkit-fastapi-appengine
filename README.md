@@ -57,7 +57,7 @@ The local dev server runs via uvicorn...
 
 ```bash
 # Cross-platform, works on Windows, MacOS and Linux
-uvicorn app.application:app --reload
+uvicorn app.main:application --reload
 
 # Alternate method of running local dev server via npm
 npm start
@@ -72,7 +72,7 @@ by using gunicorn with uvicorn workers as follows...
 
 ```bash
 # Only works on Linux and macOS
-gunicorn --workers 1 --worker-class uvicorn.workers.UvicornWorker --bind :9000 app.application:app
+gunicorn --workers 1 --worker-class uvicorn.workers.UvicornWorker --bind :9000 app.main:application
 
 # Alternate method of running production-emulated dev server via npm
 npm run start:prod
@@ -89,7 +89,7 @@ To customize the port, pass the `--port` option (for uvicorn)
 
 ```bash
 # Set uvicorn port to 9000
-uvicorn --port=:9000 app.application:app --reload
+uvicorn --port=:9000 app.main:application --reload
 
 ```
 

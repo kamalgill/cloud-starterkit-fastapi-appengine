@@ -10,10 +10,10 @@ from app.api.endpoints import api_routes
 
 def create_app():
     # Initialize FastAPI app
-    application = FastAPI()
+    app = FastAPI()
 
     # Enable CORS via middleware
-    application.add_middleware(
+    app.add_middleware(
         CORSMiddleware,
         allow_credentials=True,
         allow_headers=['*'],
@@ -21,9 +21,9 @@ def create_app():
         allow_origins=['*'],
     )
 
-    application.include_router(api_routes)
+    app.include_router(api_routes)
 
-    return application
+    return app
 
 
-app = create_app()
+application = create_app()
